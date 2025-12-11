@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>Мишка-переодевалка</title>
+<style>
+  body {
+    background: #ffd6e8;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+  #bear-box {
+    position: relative;
+    width: 200px;
+    height: 260px;
+  }
+
+  #bear-box img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+  }
+
+  .btns {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  button {
+    padding: 6px 12px;
+    border: none;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #ffe7f2;
+  }
+</style>
+</head>
+<body>
+
+<h2>Мишка-переодевалка 🧸</h2>
+
+<div id="bear-box">
+  <img id="bear" src="bear.png">
+  <img id="hat" src="" />
+  <img id="shirt" src="" />
+  <img id="shoes" src="" />
+</div>
+
+<div class="btns">
+  <button onclick="changeHat()">Шапка</button>
+  <button onclick="changeShirt()">Одежда</button>
+  <button onclick="changeShoes()">Ботинки</button>
+</div>
+
+<script>
+  let hats = ["", "hat1.png", "hat2.png"];
+  let shirts = ["", "shirt1.png", "shirt2.png"];
+  let shoes = ["", "shoes1.png", "shoes2.png"];
+
+  let hatIndex = 0;
+  let shirtIndex = 0;
+  let shoesIndex = 0;
+
+  function changeHat() {
+    hatIndex = (hatIndex + 1) % hats.length;
+    document.getElementById("hat").src = hats[hatIndex];
+  }
+
+  function changeShirt() {
+    shirtIndex = (shirtIndex + 1) % shirts.length;
+    document.getElementById("shirt").src = shirts[shirtIndex];
+  }
+
+  function changeShoes() {
+    shoesIndex = (shoesIndex + 1) % shoes.length;
+    document.getElementById("shoes").src = shoes[shoesIndex];
+  }
+</script>
+
+</body>
+</html>
