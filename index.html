@@ -54,6 +54,7 @@
   
 </style>
 </head>
+
   
 <body>
 
@@ -81,17 +82,20 @@
   let shirtIndex = 0;
   let shoesIndex = 0;
 
-  function changeHat() {
+  function changeHat() 
+  {
     hatIndex = (hatIndex + 1) % hats.length;
     document.getElementById("hat").src = hats[hatIndex];
   }
 
-  function changeShirt() {
+  function changeShirt() 
+  {
     shirtIndex = (shirtIndex + 1) % shirts.length;
     document.getElementById("shirt").src = shirts[shirtIndex];
   }
 
-  function changeShoes() {
+  function changeShoes() 
+  {
     shoesIndex = (shoesIndex + 1) % shoes.length;
     document.getElementById("shoes").src = shoes[shoesIndex];
   }
