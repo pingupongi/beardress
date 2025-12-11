@@ -67,22 +67,26 @@
   <img id="hat" src="" />
   <img id="shirt" src="" />
   <img id="shoes" src="" />
+  <img id="bags" src="" />
 </div>
 
 <div class="btns">
-  <button onclick="changeHat()">Hat</button>
-  <button onclick="changeShirt()">Clothes</button>
-  <button onclick="changeShoes()">Shoes</button>
+  <button onclick="changeHats()">HATS</button>
+  <button onclick="changeShirt()">CLOTHES</button>
+  <button onclick="changeShoes()">SHOES</button>
+  <button onclick="changeBags()">BAG</button>
 </div>
 
 <script>
   let hats = ["", "hat1.png", "hat2.png"];
   let shirts = ["", "shirt1.png", "shirt2.png"];
   let shoes = ["", "shoes1.png", "shoes2.png"];
+  let bags = ["", "bags1.png", "bags2.png"];
 
   let hatIndex = 0;
   let shirtIndex = 0;
   let shoesIndex = 0;
+  let bagsIndex = 0;
 
   function changeHat() 
   {
@@ -100,6 +104,12 @@
   {
     shoesIndex = (shoesIndex + 1) % shoes.length;
     document.getElementById("shoes").src = shoes[shoesIndex];
+  }
+
+function changeBags() 
+  {
+    bagsIndex = (bagsIndex + 1) % bags.length;
+    document.getElementById("bags").src = bags[bagsIndex];
   }
 </script>
 
