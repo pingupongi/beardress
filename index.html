@@ -52,15 +52,32 @@
   {
     background: #ffe7f2;
   }
+
+    #layout
+  {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  }
+
+  .btns
+  {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0;
+  }
   
 </style>
 </head>
+
 
   
 <body>
 
 <h2>bear dressup</h2>
 
+  <div id="layout">
 <div id="bear-box">
   <img id="bear" src="bear.png">
   <img id="hat" src="" />
@@ -75,7 +92,11 @@
   <button onclick="changeShoes()">SHOES</button>
   <button onclick="changeBags()">BAG</button>
 </div>
+  </div>
 
+
+
+  
 <script>
   let hats = ["", "hat1.png", "hat2.png", "hat3.png"];
   let shirts = ["", "shirt1.png", "shirt2.png", "shirt3.png"];
